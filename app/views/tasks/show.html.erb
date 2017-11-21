@@ -1,0 +1,14 @@
+<h1>Tasks#show</h1>
+<p>Find me in app/views/tasks/show.html.erb</p>
+
+
+  <h2><%= @task.title %></h2>
+    <p><%= @task.details %></p>
+    <p><%= @task.created_at %></p>
+
+   <%= link_to 'Return to Index', tasks_path %>
+
+
+<!--a link to its show view (use a link_to helper)
+a link to its edit view
+a link to its delete action. Hint: a standard link does not allow DELETE requests, so here you should add a method: :delete option to your link_to helper. -->

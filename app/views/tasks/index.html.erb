@@ -1,0 +1,12 @@
+<h1>Tasks#index</h1> <!--Affiche toutes les tasks -->
+  <h2>Bonjour</h2>
+    <p>Find me in app/views/tasks/index.html.erb</p>
+    <% @tasks.each do |task| %>
+  <h2><%= task.title %></h2>
+    <p><%= task.details %></p>
+    <%= link_to 'Show view', task_path(task) %>
+    <%= link_to 'Edit task', edit_task_path(task) %>
+    <%= link_to 'Delete task', task_path(task),
+    method: :delete,
+    data: {confirm: "Etes-vous sûr?"} %>
+    <% end %>
